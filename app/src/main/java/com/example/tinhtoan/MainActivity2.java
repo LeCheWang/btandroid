@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -192,6 +193,9 @@ public class MainActivity2 extends AppCompatActivity {
         }else {
             tvMoneyWin.setText("+" + money + "$");
             tvDes.setText("Chúc mừng bạn thắng " + s);
+            // phát nhạc
+            MediaPlayer mPlayer = MediaPlayer.create(MainActivity2.this, R.raw.win);
+            mPlayer.start();
         }
 
 
